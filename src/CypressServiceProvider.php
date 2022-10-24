@@ -9,7 +9,7 @@ class CypressServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        if ($this->app->environment('production')) {
+        if (!$this->app->environment('cypress')) {
             return;
         }
 
